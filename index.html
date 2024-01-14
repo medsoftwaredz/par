@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parking Report</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Parking Report</h1>
+  <form id="dataForm">
+    <div class="form-row">
+      <label for="ticketNumber">Ticket Number:</label>
+      <input type="text" id="ticketNumber" name="ticketNumber" required>
+    </div>
+    <div class="form-row">
+      <label for="roomNumber">Room Number:</label>
+      <input type="text" id="roomNumber" name="roomNumber" required>
+    </div>
+    <div class="form-row">
+      <label for="overnight">Overnight:</label>
+      <input type="checkbox" id="overnight" name="overnight">
+    </div>
+    <div class="form-row">
+      <label for="spa">SPA:</label>
+      <input type="checkbox" id="spa" name="spa">
+    </div>
+    <div class="form-row">
+      <label for="dayUse">Day-use:</label>
+      <input type="checkbox" id="dayUse" name="dayUse">
+    </div>
+    <div class="form-row">
+      <label for="siam">SIAM:</label>
+      <input type="checkbox" id="siam" name="siam">
+    </div>
+    <div class="form-row">
+      <label for="freeParking">Free Parking:</label>
+      <input type="checkbox" id="freeParking" name="freeParking">
+    </div>
+    <div class="form-row">
+      <label for="reportDate">Report Date:</label>
+      <input type="date" id="reportDate" name="reportDate" required>
+    </div>
+    <button type="submit">Add Entry</button>
+  </form>
+  <table id="reportTable">
+    <thead>
+      <tr>
+        <th>Num</th>
+        <th>Parking Ticket</th>
+        <th>Room Number</th>
+        <th>Overnight</th>
+        <th>SPA</th>
+        <th>Day-use</th>
+        <th>SIAM</th>
+        <th>Free Parking</th>
+        <th>Report Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be added here by JavaScript -->
+    </tbody>
+  </table>
+  <button id="generateReport">Generate PDF Report</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html
