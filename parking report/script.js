@@ -35,7 +35,16 @@ document.addEventListener('DOMContentLoaded', function() {
       newRow.appendChild(createCheckboxCell(siam));
       newRow.appendChild(createCheckboxCell(freeParking));
       newRow.appendChild(document.createElement('td')).textContent = reportDate; // This cell will display the report date
-  
+  // Add delete button
+    const deleteCell = newRow.insertCell(-1);
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.onclick = function() { deleteRow(this); };
+    deleteCell.appendChild(deleteBtn);
+
+    // Reset the form after submission
+    form.reset();
+  });
       // Reset the form after submission
       form.reset();
     });
